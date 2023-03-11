@@ -3,18 +3,19 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 import { db } from "../config/firebase";
-import {setContact, setEducation, setExperience, setHeader, setProjects, setSkills} from '../features/resume/slice';
+import { setContact, setEducation, setExperience, setHeader, setProjects, setSkills } from '../features/resume/slice';
 
 export default () => {
     const dispatch = useDispatch();
 
-    const fetchData = (collection, action) => {
-        db.collection(collection).onSnapshot((snapshot)=>{
-            const data = snapshot.docs.map((item) => {return {...item.data(), id: item.id}});
+    const fetchData = (collection, action, cb) => {
+        db.collection(collection).onSnapshot((snapshot) => {
+            const data = snapshot.docs.map((item) => { return { ...item.data(), id: item.id } });
             dispatch(action(data))
+            if (cb) cb()
         })
     }
-    const fetchResume = async () => {
+    const fetchResume = async (cb) => {
         const collections = [
             {
                 collection: 'Contact',
@@ -42,8 +43,8 @@ export default () => {
             },
         ];
         console.log(collections)
-        collections.forEach((value)=>fetchData(value.collection, value.action));
+        collections.forEach((value, index) => fetchData(value.collection, value.action, cb));
     }
 
-    return {fetchResume};
+    return { fetchResume };
 }
