@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
+import Contact from './component/Contact';
+import Header from './component/Header';
+import Summary from './component/Summary';
 import useResume from './hooks/useResume'
 
 const App = () => {
@@ -13,7 +16,6 @@ const App = () => {
 
   return (
     <div>
-      
       <div
         className="document doc-root fontsize fontface vmargins hmargins pagesize skn-trz7 TRZ7 ZTY"
         data-color="#1a409a"
@@ -21,159 +23,15 @@ const App = () => {
         <div id="CONTAINER_PARENT_0" className="topsection">
           <div id="CONTAINER_0">
             {/* <!-- Name --> */}
-            <div
-              data-react-beautiful-dnd-draggable="0"
-              className="sortable-item section-container SortableItem-sibling data-NAME"
-            >
-              <div
-                id="SECTION_NAME91c03c7f-9486-44e8-bf23-c2dc3c0ed1e7"
-                className="section SECTION_NAME notdraggable firstsection"
-                data-section-cd="NAME"
-              >
-                <div className="doc-item">
-                  <div className="">
-                    <div className="">
-                      <div
-                        id="PARAGRAPH_NAME_1d416c4f-68b1-4dbb-9e54-3a0a594bca5d"
-                        className="paragraph PARAGRAPH_NAME firstparagraph"
-                      >
-                        <div>
-                          <div className="name word-break">
-                            <span id="FIELD_FNAM">Tauheed</span>
-                            <span className="word-break" id="FIELD_LNAM">Butt</span>
-                          </div>
-                          <div className="resumeTitle" id="FIELD_DCTL">
-                            Software Engineer
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Header/>
             {/* <!-- Sumarry --> */}
-            <div
-              data-react-beautiful-dnd-draggable="0"
-              className="sortable-item section-container SortableItem-sibling data-SUMM"
-            >
-              <div
-                id="SECTION_SUMM4eaba89a-a184-4666-a5e5-83b6426660e7"
-                className="section summary notdraggable SECTION_SUMM"
-                data-section-cd="SUMM"
-              >
-                <div className="doc-item">
-                  <div className="">
-                    <div className="">
-                      <div
-                        id="PARAGRAPH_SUMM_c1675158-b3cd-4c62-a9bd-bb61ded48c6f"
-                        className="paragraph PARAGRAPH_SUMM firstparagraph"
-                      >
-                        <div className="clearfix doc-item">
-                          <div className="singlecolumn" id="FIELD_FRFM">
-                            <p>
-                              Proactive software engineer with superior skills
-                              in programming, mainly in MERN stack development.
-                              Eager to bring value to my career in software
-                              development through hard work and commitment to
-                              quality. Responsible and dedicated to grow my
-                              coding abilities while boosting my career's
-                              operational success.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Summary/>
           </div>
         </div>
         <div id="CONTAINER_PARENT_1" className="parentContainer">
           <div id="CONTAINER_1" className="left-box">
             {/* <!-- Contact --> */}
-            <div
-              data-react-beautiful-dnd-draggable="1"
-              className="sortable-item section-container SortableItem-sibling data-CNTC"
-            >
-              <div
-                id="SECTION_CNTC3bafdb5e-c96c-4413-83a1-04984776c698"
-                className="section SECTION_CNTC notdraggable has-title"
-                data-section-cd="CNTC"
-              >
-                <div className="doc-item">
-                  <div className="heading">
-                    <div className="sectiontitle" id="SECTIONNAME_CNTC">
-                      Contact
-                    </div>
-                  </div>
-                  <div className="">
-                    <div className="">
-                      <div
-                        id="PARAGRAPH_CNTC_df2e4136-2197-457e-92f0-d747c0ecf8c1"
-                        className="paragraph PARAGRAPH_CNTC firstparagraph"
-                      >
-                        <div className="clearfix doc-item">
-                          <div className="address">
-                            <div className="singlecolumn">
-                              {/* <!-- Address --> */}
-                              <div dependency="STRT|CITY|STAT|ZIPC|ADDR">
-                                <div className="txtBold">
-                                  <span className="xslt_static_change"
-                                    >Address
-                                  </span>
-                                </div>
-                                <div id="FIELD_STRT"></div>
-                                <span id="FIELD_CITY"></span>
-                                <span id="FIELD_STAT"></span>
-                                <span id="FIELD_ZIPC"></span>
-                                <span id="FIELD_ADDR">Islamabad Pakistan</span>
-                              </div>
-                              {/* <!-- Contact Phone --> */}
-                              <div className="txtBold mt5" dependency="HPHN|CPHN">
-                                <span className="xslt_static_change">Phone </span>
-                              </div>
-                              <div dependency="HPHN">
-                                <span id="FIELD_HPHN">+923331426921</span>
-                              </div>
-                              {/* <!-- Contact Email --> */}
-                              <div className="txtBold mt5" dependency="EMAI">
-                                <span className="xslt_static_change">E-mail </span>
-                              </div>
-                              <div dependency="EMAI" className="word-break">
-                                <span id="FIELD_EMAI"
-                                  >tauheedbutt@gmail.com</span
-                                >
-                              </div>
-                              {/* <!-- Socials --> */}
-                              <div dependency="SOCL">
-                                <div id="CATEGORY_SOCIAL_SOCL" className="mt5">
-                                  <div id="DOCDATAINFO_SOCL" className="txtBold">
-                                    LinkedIn
-                                  </div>
-                                  <div id="FIELD_SOCL">
-                                    https://www.linkedin.com/in/tauheed-butt-18b9a61b9
-                                  </div>
-                                </div>
-                                <div id="CATEGORY_SOCIAL_SOCL" className="mt5">
-                                  <div id="DOCDATAINFO_SOCL" className="txtBold">
-                                    Github
-                                  </div>
-                                  <div id="FIELD_SOCL">
-                                    https://github.com/tauheedbuttt
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Contact/>
             {/* <!-- Skills --> */}
             <div
               data-react-beautiful-dnd-draggable="1"
