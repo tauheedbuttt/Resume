@@ -33,17 +33,520 @@
     />
   </head>
   <body>
+    <!-- Style -->
+    <div>
+      <style type="text/css" id="static">
+        /*Font support for MAC*/
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: normal;
+          font-style: normal;
+          src: local("Century Gothic"),
+            url("/blobcontent/zty/fonts/CenturyGothic.ttf") format("truetype");
+        }
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: bold;
+          font-style: normal;
+          src: local("Century Gothic Bold"),
+            url("/blobcontent/zty/fonts/CenturyGothicBold.ttf")
+              format("truetype");
+        }
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: bold;
+          font-style: italic;
+          src: local("Century Gothic Bold Italic"),
+            url("/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf")
+              format("truetype");
+        }
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: normal;
+          font-style: italic;
+          src: local("Century Gothic Italic"),
+            url("/blobcontent/zty/fonts/CenturyGothicItalic.ttf")
+              format("truetype");
+        }
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          outline: 0;
+          vertical-align: baseline;
+          background: transparent;
+        }
+        body {
+          line-height: 1;
+          text-align: left;
+          font-feature-settings: "liga" 0;
+          -moz-font-feature-settings: "liga" off;
+        }
+        .skn-trz7 ol,
+        .skn-trz7 ul {
+          list-style: none;
+        }
+        .skn-trz7 table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          font-size: inherit;
+          color: inherit;
+          width: 100%;
+        }
+
+        /*START content disc style for LI*/
+        .skn-trz7 ul,
+        .skn-trz7 li {
+          margin: 0;
+          padding: 0;
+          list-style-type: disc;
+        }
+        .skn-trz7 ul li {
+          margin: 0 0 0 16px;
+          padding: 0;
+        }
+        @-moz-document url-prefix() {
+          .skn-trz7 ul li {
+            margin: 0 0 0 12px;
+            padding: 0 0 0 3px;
+          }
+        }
+        /*END content disc style for LI*/
+
+        .skn-trz7 table.skills,
+        .table_wrapper {
+          width: 100%;
+          margin-top: 0;
+          word-wrap: break-word;
+        }
+        .skn-trz7 table.skills th,
+        table.skills td {
+          width: 20%;
+          text-align: center;
+        }
+        .skn-trz7 table.skills .skillname,
+        .skn-trz7 table.skills .skillrating {
+          text-align: left;
+          width: 35%;
+        }
+        .skn-trz7 table.skills .skillrating {
+          width: 20%;
+        }
+        .skn-trz7 table.skills .skillyears,
+        .skn-trz7 table.skills .skilllast {
+          width: 19%;
+        }
+        .skn-trz7 table.skills .pad1 {
+          width: 5%;
+        }
+        .skn-trz7 .skills .pad2,
+        .skn-trz7 table.skills .pad3 {
+          width: 1%;
+        }
+
+        /* document */
+        .skn-trz7 {
+          color: #343434;
+          line-height: 16px;
+          font-variant-ligatures: none;
+          min-height: 792px;
+          box-sizing: border-box;
+          word-wrap: break-word;
+        }
+        .skn-trz7 .name {
+          color: #002e58;
+          font-weight: bold;
+          padding: 0 0 6px 0;
+          text-align: left;
+          position: relative;
+          word-wrap: break-word;
+        }
+        .skn-trz7 .address .singlecolumn {
+          margin-left: 0 !important;
+        }
+        .skn-trz7 .resumeTitle {
+          color: #002e58;
+          font-style: italic;
+          font-weight: 400;
+        }
+
+        /* Heading */
+        .skn-trz7 .heading {
+          border-bottom: 1px solid #d5d6d6;
+          padding: 0 0 3px;
+          letter-spacing: 0;
+          font-weight: bold;
+          line-height: 15px;
+          margin-bottom: 10px;
+        }
+        .skn-trz7 .sectiontitle {
+          color: #002e58;
+          word-wrap: break-word;
+        }
+        .skn-trz7 .degreeGap {
+          margin-bottom: 4px;
+        }
+        .skn-trz7 .locationGap {
+          margin-top: 4px;
+        }
+        .skn-trz7 .firstparagraph {
+          margin-top: 0 !important;
+        }
+
+        /* section */
+        .skn-trz7 .firstsection,
+        .skn-trz7 .SECTION_NAME {
+          padding-top: 0 !important;
+        }
+        .skn-trz7 .section:empty {
+          display: none;
+        }
+        .skn-trz7 .education .joblocation {
+          font-style: italic;
+        }
+
+        /* style for top section container */
+        .skn-trz7 .topsection > div {
+          padding-bottom: 20px;
+        }
+
+        /* style for left and right box */
+        .skn-trz7 .parentContainer {
+          display: table;
+          width: 100%;
+          min-height: inherit;
+          table-layout: fixed;
+          border-collapse: collapse;
+        }
+        .skn-trz7 .left-box,
+        .skn-trz7 .right-box {
+          padding-left: 15px;
+        }
+        .skn-trz7 .left-box {
+          padding-left: 0;
+          padding-right: 15px;
+        }
+        .skn-trz7 .left-box {
+          box-sizing: initial;
+          display: table-cell;
+          letter-spacing: 0.2px;
+        }
+        .skn-trz7 .right-box .section:first-child,
+        .skn-trz7 .left-box .section:first-child {
+          padding-top: 0px !important;
+        }
+        .skn-trz7 .right-box .paddedline.date-content {
+          position: absolute;
+          font-weight: 700;
+          margin-left: 0;
+          width: 65px;
+        }
+        .skn-trz7 .paragraph {
+          position: relative;
+        }
+        .skn-trz7 .summary .singlecolumn {
+          margin-left: 0;
+        }
+        .skn-trz7 .right-box {
+          display: table-cell;
+          letter-spacing: 0.2px;
+          vertical-align: top;
+        }
+        .skn-trz7 .summary.section {
+          padding-top: 15px;
+        }
+
+        .skn-trz7 .txtBold {
+          font-weight: bold;
+        }
+        .skn-trz7 .txtItl {
+          font-style: italic;
+        }
+        .skn-trz7 .paddedline {
+          display: block;
+        }
+        .skn-trz7 .mt5 {
+          margin-top: 5px;
+        }
+        .skn-trz7 .word-break {
+          word-wrap: break-word;
+        }
+
+        /*Rating*/
+        .skn-trz7 .ratingWrapper svg {
+          height: 10px;
+          stroke: #002e58;
+        }
+        .skn-trz7 .ratingWrapper .noLnht {
+          line-height: 0;
+        }
+        .skn-trz7 .headingIcon svg circle,
+        .skn-trz7 .ratingWrapper svg .default-fill {
+          fill: #002e58;
+        }
+        .skn-trz7 .ratingRow {
+          position: relative;
+          white-space: nowrap;
+        }
+        .skn-trz7 .ratingRow .ratingText,
+        .skn-trz7 .ratingRow .ratingWrapper {
+          width: 50%;
+          display: inline-block;
+          word-break: break-word;
+          white-space: normal;
+          vertical-align: top;
+        }
+        .skn-trz7 .ratingRow .ratingText + .ratingWrapper {
+          text-align: right;
+        }
+        .skn-trz7 .SortableItem .ratingRow .ratingText + .ratingWrapper {
+          margin-top: 5px;
+          padding-top: 0;
+        }
+        .skn-trz7 .SortableItem .ratingWrapper span {
+          top: 0;
+          line-height: inherit;
+        }
+
+        /* Only for firefox */
+        @-moz-document url-prefix() {
+          .skn-trz7 .parentContainer {
+            height: 1px;
+          }
+        }
+
+        .skn-trz7 .ratingRow .ratingText:last-child,
+        .skn-trz7 .hide-bar .ratingText {
+          width: 100%;
+        }
+
+        /* For dates fix */
+        .skn-trz7 .right-box .hidedates {
+          visibility: hidden;
+          position: static !important;
+          display: block;
+          float: left;
+        }
+        .skn-trz7 .left-box .hidedates,
+        .skn-trz7 .hide-bar .noLnht,
+        .skn-trz7 .hide-bar .field-ratt {
+          display: none;
+        }
+        .skn-trz7 .paragraph.datespara:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /*PICT*/
+        .skn-trz7 .prflPic,
+        .skn-trz7 .prflPic > div {
+          width: 155px;
+          height: 155px;
+        }
+        .skn-trz7 .prflPic img {
+          min-width: 100%;
+          max-width: 100%;
+          min-height: 100%;
+          max-height: 100%;
+        }</style
+      ><style
+        type="text/css"
+        id="dynamic"
+        data-time="Sat Mar 11 2023 12:41:37 GMT+0500 (Pakistan Standard Time)"
+      >
+        .skn-trz7,
+        .skn-trz7 table {
+          line-height: 17px;
+        }
+        .skn-trz7.pagesize {
+          width: 595px;
+        }
+        .skn-trz7.fontsize {
+          font-size: 11px;
+        }
+        .skn-trz7.fontface {
+          font-family: Century Gothic;
+        }
+        .skn-trz7.vmargins {
+          padding-top: 17px;
+          padding-bottom: 17px;
+        }
+        .skn-trz7.hmargins {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .skn-trz7 .section {
+          padding-top: 14px;
+        }
+        .skn-trz7 .left-box .section:after {
+          padding-bottom: 4px;
+        }
+        .skn-trz7 .paragraph {
+          margin-top: 9px;
+        }
+        .skn-trz7 .singlecolumn,
+        .skn-trz7 .maincolumn {
+          word-wrap: break-word;
+        }
+        .skn-trz7 .right-box .singlecolumn,
+        .skn-trz7 .right-box .maincolumn {
+          margin-left: 0px;
+        }
+        .skn-trz7 table.skills td {
+          padding-top: 4px;
+        }
+        .skn-trz7 .jobtitle,
+        .skn-trz7 .degree,
+        .skn-trz7 .programline {
+          font-size: 14px;
+        }
+        .skn-trz7 .name {
+          color: #1a409a;
+          font-size: 36px;
+          line-height: 39px;
+        }
+        .skn-trz7 .heading {
+          line-height: 22px;
+        }
+        .skn-trz7 .sectiontitle {
+          font-size: 16px;
+          color: #1a409a;
+        }
+        .skn-trz7 .left-box {
+          width: 161px;
+        }
+        .skn-trz7 .right-box .paragraph .singlecolumn {
+          margin-left: 91px;
+        }
+        .skn-trz7 svg {
+          stroke: #1a409a;
+        }
+        .skn-trz7 .resumeTitle {
+          font-size: 16px;
+          color: #1a409a;
+          line-height: 16px;
+        }
+        .skn-trz7 .ratingWrapper {
+          padding-top: 3px;
+        }
+        .skn-trz7 .ratingWrapper svg {
+          stroke: #1a409a;
+        }
+        .skn-trz7 .headingIcon svg circle,
+        .skn-trz7 .ratingWrapper svg .default-fill {
+          fill: #1a409a;
+        }
+
+        /* Issues fix for builder page */
+        #displayResume .skn-trz7.document {
+          min-height: 792px;
+        }
+        .skn-trz7 .SortableList {
+          margin-bottom: 0 !important;
+        }
+        .skn-trz7 .SortableList,
+        .skn-trz7 > div {
+          min-height: inherit;
+        }
+        .skn-trz7 .left-box .SortableItem:first-child > .wrapper > .section {
+          padding-top: 0 !important;
+        }
+        .skn-trz7 > div:not(.topsection),
+        .skn-trz7 > div:not(.parentContainer) {
+          min-height: auto;
+        }
+
+        /* Phase 2: Issues fix for builder page */
+        .skn-trz7 .parentContainer .left-box > .SortableItem,
+        .skn-trz7 .parentContainer .right-box > .SortableItem {
+          padding-top: 14px;
+        }
+        .skn-trz7 .parentContainer .left-box > .SortableItem:first-child,
+        .skn-trz7 .parentContainer .right-box > .SortableItem:first-child {
+          padding-top: 0;
+        }
+
+        /*Hover border style*/
+        .skn-trz7.active .wrapper-bg {
+          left: -62px !important;
+          right: -62px !important;
+        }
+        .skn-trz7.active .acrs-bdr {
+          left: -60px !important;
+        }
+        .skn-trz7.active .acr-edit,
+        .skn-trz7.active .acr-delete {
+          left: -59px !important;
+        }
+        .skn-trz7.active .acr-move {
+          right: -59px !important;
+        }
+      </style>
+    </div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
