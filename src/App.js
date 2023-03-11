@@ -1,5 +1,5 @@
-import react from 'react'
-
+import React from 'react'
+import './App.css'
 import Resume from './features/resume/Resume';
 
 const App = () => {

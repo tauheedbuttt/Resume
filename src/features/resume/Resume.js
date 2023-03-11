@@ -20,35 +20,31 @@ const App = () => {
         fetchResume(loading ? () => setLoading(false) : null)
     }, [])
 
+
     return (
-        <Loader loading={loading}>
-            <div className="document doc-root fontsize fontface vmargins hmargins pagesize skn-trz7 TRZ7 ZTY" data-color="#1a409a">
-                <div id="CONTAINER_PARENT_0" className="topsection">
-                    <div id="CONTAINER_0">
-                        {/* <!-- Name --> */}
-                        <Header />
-                        {/* <!-- Sumarry --> */}
-                        <Summary />
+        <div className='d-flex align-items-center justify-content-center' style={{ width: '100%', height: '100vh' }}>
+            <Loader loading={loading}>
+                <div className="shadow-lg p-3 bg-white rounded document doc-root fontsize fontface vmargins hmargins pagesize skn-trz7 TRZ7 ZTY" data-color="#1a409a">
+                    <div id="CONTAINER_PARENT_0" className="topsection w-100">
+                        <div id="CONTAINER_0">
+                            <Header />
+                            <Summary />
+                        </div>
+                    </div>
+                    <div id="CONTAINER_PARENT_1" className="parentContainer">
+                        <div id="CONTAINER_1" className="left-box">
+                            <Contact />
+                            <Skills />
+                        </div>
+                        <div id="CONTAINER_2" className="right-box">
+                            <Work />
+                            <Education />
+                            <Project />
+                        </div>
                     </div>
                 </div>
-                <div id="CONTAINER_PARENT_1" className="parentContainer">
-                    <div id="CONTAINER_1" className="left-box">
-                        {/* <!-- Contact --> */}
-                        <Contact />
-                        {/* <!-- Skills --> */}
-                        <Skills />
-                    </div>
-                    <div id="CONTAINER_2" className="right-box">
-                        {/* <!-- Work History --> */}
-                        <Work />
-                        {/* <!-- Education History --> */}
-                        <Education />
-                        {/* <!-- Projects --> */}
-                        <Project />
-                    </div>
-                </div>
-            </div>
-        </Loader>
+            </Loader>
+        </div>
     )
 }
 
