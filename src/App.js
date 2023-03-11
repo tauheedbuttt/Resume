@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import Resume from './features/resume/Resume';
+import ResumePage from './pages/ResumePage';
 
 const App = () => {
   return (
     <div>
-      <Resume />
+      <ResumePage />
     </div>
   )
 }

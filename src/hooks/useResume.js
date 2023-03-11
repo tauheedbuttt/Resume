@@ -7,6 +7,7 @@ import { setContact, setEducation, setExperience, setHeader, setProjects, setSki
 
 export default () => {
     const dispatch = useDispatch();
+    const [loading, setLoading] = useState(true);
 
     const fetchData = (collection, action, cb) => {
         db.collection(collection).onSnapshot((snapshot) => {
@@ -15,7 +16,7 @@ export default () => {
             if (cb) cb()
         })
     }
-    const fetchResume = async (cb) => {
+    const fetchResume = async () => {
         const collections = [
             {
                 collection: 'Contact',
@@ -42,9 +43,12 @@ export default () => {
                 action: setSkills
             },
         ];
-        console.log(collections)
-        collections.forEach((value, index) => fetchData(value.collection, value.action, cb));
+        setLoading(true);
+        collections.forEach((value, index) => fetchData(value.collection, value.action, index != collections?.length - 1 ? null : () => setLoading(false)));
     }
 
-    return { fetchResume };
+    return {
+        loading,
+        fetchResume
+    };
 }

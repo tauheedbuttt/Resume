@@ -14,7 +14,7 @@ const Rating = ({ rating }) => {
                             cy="50"
                             r="40"
                             fill={item <= rating ? "#1a409a" : "#fff"}
-                            stroke-width="4"
+                            strokeWidth="4"
                             className={item <= rating ? "default-fill" : ""}
                         />
                     ))
