@@ -17,12 +17,11 @@ const App = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetchResume(loading ? () => setLoading(false) : null)
+        fetchResume(() => setLoading(false))
     }, [])
 
-
     return (
-        <div className='d-flex align-items-center justify-content-center' style={{ width: '100%', height: '100vh' }}>
+        <div className='resume-container d-flex align-items-center justify-content-center' style={{ width: '100%', height: '100vh' }}>
             <Loader loading={loading}>
                 <div className="shadow-lg p-3 bg-white rounded document doc-root fontsize fontface vmargins hmargins pagesize skn-trz7 TRZ7 ZTY" data-color="#1a409a">
                     <div id="CONTAINER_PARENT_0" className="topsection w-100">
