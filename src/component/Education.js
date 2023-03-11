@@ -62,12 +62,6 @@ const Education = () => {
                         </div>
                     </div>
                 </div>
-                <div
-                    className="doc-overlay section-overlay"
-                    style={{ left: -22, right: -22 }}
-                >
-                    <span>&nbsp;</span>
-                </div>
             </div>
         </div>
     )
