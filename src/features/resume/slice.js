@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { welcomeMessages } from "../../config/constants";
 
 const resumeSlice = createSlice({
   name: 'resume',
