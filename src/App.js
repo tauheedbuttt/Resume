@@ -4,16 +4,17 @@ import Contact from './component/Contact';
 import Header from './component/Header';
 import Skills from './component/Skills';
 import Summary from './component/Summary';
+import Work from './component/Work';
 import useResume from './hooks/useResume'
 
 const App = () => {
-  const {resume} = useSelector(state => state.resume); 
-  const {fetchResume} = useResume();
+  const { resume } = useSelector(state => state.resume);
+  const { fetchResume } = useResume();
 
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchResume();
-  },[])
+  }, [])
 
   return (
     <div>
@@ -24,255 +25,21 @@ const App = () => {
         <div id="CONTAINER_PARENT_0" className="topsection">
           <div id="CONTAINER_0">
             {/* <!-- Name --> */}
-            <Header/>
+            <Header />
             {/* <!-- Sumarry --> */}
-            <Summary/>
+            <Summary />
           </div>
         </div>
         <div id="CONTAINER_PARENT_1" className="parentContainer">
           <div id="CONTAINER_1" className="left-box">
             {/* <!-- Contact --> */}
-            <Contact/>
+            <Contact />
             {/* <!-- Skills --> */}
-            <Skills/>
+            <Skills />
           </div>
           <div id="CONTAINER_2" className="right-box">
             {/* <!-- Work History --> */}
-            <div
-              data-react-beautiful-dnd-draggable="1"
-              className="sortable-item section-container SortableItem-sibling data-EXPR"
-            >
-              <div
-                id="SECTION_EXPR246c480e-15ee-47ca-8f9a-48499da52d1e"
-                className="section experience SECTION_EXPR multi-para has-title"
-                data-section-cd="EXPR"
-              >
-                <div className="doc-item">
-                  {/* <!-- Work History Title --> */}
-                  <div className="heading">
-                    <div className="sectiontitle" id="SECTIONNAME_EXPR">
-                      Work History
-                    </div>
-                  </div>
-                  {/* <!-- Work History List --> */}
-                  <div className="">
-                    <div className="sortableInner">
-                      <div
-                        id="PARAGRAPH_EXPR_5e283133-9666-4339-9c85-582ad16cc2ae"
-                        className="paragraph datespara PARAGRAPH_EXPR firstparagraph"
-                      >
-                        <div className="clearfix doc-item">
-                          <div
-                            className="paddedline date-content hidedates"
-                            dependency="JSTD|EDDT"
-                          >
-                            <span className="jobdates" dependency="JSTD"
-                              >2007-03</span
-                            ><span dependency="JSTD+EDDT"> - </span
-                            ><span className="jobdates" dependency="EDDT"
-                              >2007-03</span
-                            >
-                          </div>
-                          <div
-                            className="paddedline date-content"
-                            dependency="JSTD|EDDT"
-                          >
-                            <span
-                              className="jobdates"
-                              id="FIELD_JSTD"
-                              format="%Y-%m"
-                              >2022-01</span
-                            ><span dependency="JSTD+EDDT"> - </span
-                            ><span
-                              className="jobdates"
-                              id="FIELD_EDDT"
-                              format="%Y-%m"
-                              >Current</span
-                            >
-                          </div>
-                          <div className="singlecolumn">
-                            <span className="paddedline" dependency="JTIT">
-                              <span className="jobtitle txtBold" id="FIELD_JTIT"
-                                >Full Stack Developer</span
-                              >
-                            </span>
-                            <span
-                              className="paddedline locationGap txtItl"
-                              dependency="COMP|JSTA|JCIT"
-                            >
-                              <span className="companyname" id="FIELD_COMP"
-                                >PrograminStudio</span
-                              ><span className="jobcity" id="FIELD_JCIT"></span
-                              ><span className="jobstate" id="FIELD_JSTA"></span>
-                            </span>
-                            <span className="jobline" id="FIELD_JDES"
-                              ><ul>
-                                <li>Create new Mobile Apps using MERN stack</li>
-                                <li>
-                                  Creating new E-Commerce Mobile Applications
-                                </li>
-                                <li>Maintaining previous built applications</li>
-                                <li>
-                                  Creating new and integrating changed backend
-                                  for applications.
-                                </li>
-                              </ul></span
-                            >
-                          </div>
-                        </div>
-                        <div
-                          className="doc-overlay para-overlay"
-                          style={{left: -22, right: -22}}
-                        >
-                          <span className="badge badge-primary badge-edit"></span
-                          ><span>&nbsp;</span>
-                        </div>
-                      </div>
-                      <div
-                        id="PARAGRAPH_EXPR_e2b35f7d-941d-41a5-9b14-3e4bacee3dc6"
-                        className="paragraph datespara PARAGRAPH_EXPR"
-                      >
-                        <div className="clearfix doc-item">
-                          <div
-                            className="paddedline date-content hidedates"
-                            dependency="JSTD|EDDT"
-                          >
-                            <span className="jobdates" dependency="JSTD"
-                              >2007-03</span
-                            ><span dependency="JSTD+EDDT"> - </span
-                            ><span className="jobdates" dependency="EDDT"
-                              >2007-03</span
-                            >
-                          </div>
-                          <div
-                            className="paddedline date-content"
-                            dependency="JSTD|EDDT"
-                          >
-                            <span
-                              className="jobdates"
-                              id="FIELD_JSTD"
-                              format="%Y-%m"
-                              >2022-08</span
-                            ><span dependency="JSTD+EDDT"> - </span
-                            ><span
-                              className="jobdates"
-                              id="FIELD_EDDT"
-                              format="%Y-%m"
-                              >2022-11</span
-                            >
-                          </div>
-                          <div className="singlecolumn">
-                            <span className="paddedline" dependency="JTIT">
-                              <span className="jobtitle txtBold" id="FIELD_JTIT"
-                                >React Native Intern</span
-                              >
-                            </span>
-                            <span
-                              className="paddedline locationGap txtItl"
-                              dependency="COMP|JSTA|JCIT"
-                            >
-                              <span className="companyname" id="FIELD_COMP"
-                                >PrograminStudio</span
-                              ><span className="jobcity" id="FIELD_JCIT"></span
-                              ><span className="jobstate" id="FIELD_JSTA"></span>
-                            </span>
-                            <span className="jobline" id="FIELD_JDES"
-                              ><ul>
-                                <li>
-                                  Integrated existing application with diﬀerent
-                                  backend
-                                </li>
-                                <li>
-                                  Provided new features to existing company's
-                                  mobile applications.
-                                </li>
-                              </ul></span
-                            >
-                          </div>
-                        </div>
-                        <div
-                          className="doc-overlay para-overlay"
-                          style={{left: -22, right: -22}}
-                        >
-                          <span className="badge badge-primary badge-edit"></span
-                          ><span>&nbsp;</span>
-                        </div>
-                      </div>
-                      <div
-                        id="PARAGRAPH_EXPR_c0ec29e0-d8a6-4ec3-9e3c-7f80b1218bbb"
-                        className="paragraph datespara PARAGRAPH_EXPR"
-                      >
-                        <div className="clearfix doc-item">
-                          <div
-                            className="paddedline date-content hidedates"
-                            dependency="JSTD|EDDT"
-                          >
-                            <span className="jobdates" dependency="JSTD"
-                              >2007-03</span
-                            ><span dependency="JSTD+EDDT"> - </span
-                            ><span className="jobdates" dependency="EDDT"
-                              >2007-03</span
-                            >
-                          </div>
-                          <div
-                            className="paddedline date-content"
-                            dependency="JSTD|EDDT"
-                          >
-                            <span
-                              className="jobdates"
-                              id="FIELD_JSTD"
-                              format="%Y-%m"
-                              >2021-09</span
-                            ><span dependency="JSTD+EDDT"> - </span
-                            ><span
-                              className="jobdates"
-                              id="FIELD_EDDT"
-                              format="%Y-%m"
-                              >2021-10</span
-                            >
-                          </div>
-                          <div className="singlecolumn">
-                            <span className="paddedline" dependency="JTIT">
-                              <span className="jobtitle txtBold" id="FIELD_JTIT"
-                                >Software Intern</span
-                              >
-                            </span>
-                            <span
-                              className="paddedline locationGap txtItl"
-                              dependency="COMP|JSTA|JCIT"
-                            >
-                              <span className="companyname" id="FIELD_COMP"
-                                >National Development Complex, NESCOM</span
-                              ><span className="jobcity" id="FIELD_JCIT"></span
-                              ><span className="jobstate" id="FIELD_JSTA"></span>
-                            </span>
-                            <span className="jobline" id="FIELD_JDES"
-                              ><ul>
-                                <li>
-                                  Worked on a Point of Sale - Desktop
-                                  Application using C# and SQL Server
-                                </li>
-                                <li>
-                                  Application kept record of all the sales that
-                                  are being made at the speciﬁc organization.
-                                </li>
-                              </ul></span
-                            >
-                          </div>
-                        </div>
-                        <div
-                          className="doc-overlay para-overlay"
-                          style={{left: -22, right: -22}}
-                        >
-                          <span className="badge badge-primary badge-edit"></span
-                          ><span>&nbsp;</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Work />
             {/* <!-- Education History --> */}
             <div
               data-react-beautiful-dnd-draggable="1"
@@ -303,10 +70,10 @@ const App = () => {
                             dependency="GRST|GRED"
                           >
                             <span className="jobdates" dependency="GRST"
-                              >2007-03</span
+                            >2007-03</span
                             ><span dependency="GRST+GRED"> - </span>
                             <span className="jobdates" dependency="GRED"
-                              >2007-03</span
+                            >2007-03</span
                             >
                           </div>
                           <div className="paddedline date-content">
@@ -314,13 +81,13 @@ const App = () => {
                               className="jobdates"
                               id="FIELD_GRST"
                               format="%Y-%m"
-                              >2019-02</span
+                            >2019-02</span
                             ><span dependency="GRST+GRED"> - </span>
                             <span
                               className="jobdates"
                               id="FIELD_GRED"
                               format="%Y-%m"
-                              >2023-02</span
+                            >2023-02</span
                             >
                           </div>
                           <div className="singlecolumn">
@@ -331,7 +98,7 @@ const App = () => {
                               <span className="degree" id="FIELD_DGRE">BS</span
                               ><span dependency="DGRE+STUY">: </span
                               ><span className="programline" id="FIELD_STUY"
-                                >Computer Science</span
+                              >Computer Science</span
                               >
                             </span>
                             <div
@@ -339,10 +106,10 @@ const App = () => {
                               dependency="SCIT|SSTA|SCHO"
                             >
                               <span className="companyname" id="FIELD_SCHO"
-                                >Bahria University</span
+                              >Bahria University</span
                               ><span dependency="SCHO+SSTA|SCIT"> - </span
                               ><span className="joblocation jobcity" id="FIELD_SCIT"
-                                >Islamabad</span
+                              >Islamabad</span
                               ><span
                                 className="joblocation jobstate"
                                 id="FIELD_SSTA"
@@ -353,7 +120,7 @@ const App = () => {
                         </div>
                         <div
                           className="doc-overlay para-overlay"
-                          style={{left: -22, right: -22}}
+                          style={{ left: -22, right: -22 }}
                         >
                           <span className="badge badge-primary badge-edit"></span
                           ><span>&nbsp;</span>
@@ -369,10 +136,10 @@ const App = () => {
                             dependency="GRST|GRED"
                           >
                             <span className="jobdates" dependency="GRST"
-                              >2007-03</span
+                            >2007-03</span
                             ><span dependency="GRST+GRED"> - </span>
                             <span className="jobdates" dependency="GRED"
-                              >2007-03</span
+                            >2007-03</span
                             >
                           </div>
                           <div className="paddedline date-content">
@@ -380,13 +147,13 @@ const App = () => {
                               className="jobdates"
                               id="FIELD_GRST"
                               format="%Y-%m"
-                              >2015-09</span
+                            >2015-09</span
                             ><span dependency="GRST+GRED"> - </span>
                             <span
                               className="jobdates"
                               id="FIELD_GRED"
                               format="%Y-%m"
-                              >2018-08</span
+                            >2018-08</span
                             >
                           </div>
                           <div className="singlecolumn">
@@ -395,7 +162,7 @@ const App = () => {
                               dependency="DGRE|STUY"
                             >
                               <span className="degree" id="FIELD_DGRE"
-                                >A' Level</span
+                              >A' Level</span
                               ><span className="programline" id="FIELD_STUY"></span>
                             </span>
                             <div
@@ -403,10 +170,10 @@ const App = () => {
                               dependency="SCIT|SSTA|SCHO"
                             >
                               <span className="companyname" id="FIELD_SCHO"
-                                >The City School</span
+                              >The City School</span
                               ><span dependency="SCHO+SSTA|SCIT"> - </span
                               ><span className="joblocation jobcity" id="FIELD_SCIT"
-                                >Islamabad, IBCC</span
+                              >Islamabad, IBCC</span
                               ><span
                                 className="joblocation jobstate"
                                 id="FIELD_SSTA"
@@ -417,7 +184,7 @@ const App = () => {
                         </div>
                         <div
                           className="doc-overlay para-overlay"
-                          style={{left: -22, right: -22}}
+                          style={{ left: -22, right: -22 }}
                         >
                           <span className="badge badge-primary badge-edit"></span
                           ><span>&nbsp;</span>
@@ -428,7 +195,7 @@ const App = () => {
                 </div>
                 <div
                   className="doc-overlay section-overlay"
-                  style={{left: -22, right: -22}}
+                  style={{ left: -22, right: -22 }}
                 >
                   <span>&nbsp;</span>
                 </div>
@@ -470,7 +237,7 @@ const App = () => {
                         </div>
                         <div
                           className="doc-overlay para-overlay"
-                          style={{left: -22, right: -22}}
+                          style={{ left: -22, right: -22 }}
                         >
                           <span className="badge badge-primary badge-edit"></span
                           ><span>&nbsp;</span>
